@@ -26,10 +26,10 @@ function Team() {
             <Box>
                 <Image src={Founder2}/>
                 <Box>
-                    <a href='https://twitter.com/' target='_blank' rel='noopener noreferrer'>
-                        <Text color='#f9e522'>Zinc</Text>
+                    <a href='https://twitter.com/Artbyekene_' target='_blank' rel='noopener noreferrer'>
+                        <Text color='#f9e522'>Ekene</Text>
                     </a>
-                    <Text fontSize='13px' as='i'>Architect</Text>
+                    <Text fontSize='13px' as='i'>Founder</Text>
                 </Box>
             </Box>
             <Box>

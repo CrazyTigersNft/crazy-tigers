@@ -5,6 +5,8 @@ import Discord from './assets/social-media-icons/discord.png';
 import Twitter from './assets/social-media-icons/twitter.png';
 import Opensea from './assets/social-media-icons/opensea.png';
 
+
+
 const NavBar = ({ accounts, setAccounts }) => {
     const isConnected = Boolean(accounts[0]);
 
@@ -23,46 +25,59 @@ const NavBar = ({ accounts, setAccounts }) => {
     
     
     return (
-        <nav>
-            <Flex justify='space-between' align='center' padding='30px'>
+
+        <header>
+            <Flex justify='space-evenly' align='center' padding='25px'>
                 {/* letft side - socials */}
-                <Flex justify='space-around' width='40%' padding='0 75px'>
-                    <a href='https://discord.gg/tPRE7kH2Hq' target='_blank' rel='noopener noreferrer'>
-                        <Image src={Discord} boxSize='42px' margin='0 15px' alt='discord'/>
-                    </a>
-                    <a href='https://twitter.com/crazytigernft' target='_blank' rel='noopener noreferrer'>
-                        <Image src={Twitter} boxSize='42px' margin='0 15px' alt='twitter'/>
-                    </a>
-                    <a href='https://opensea.io' target='_blank' rel='noopener noreferrer'>
-                        <Image src={Opensea} boxSize='42px' margin='0 15px' alt='opensea'/>
-                    </a>
+                <Flex justify='space-evenly' width='10%' align='left' padding=' 0px 0px 0px 40px'>
+                    <Box boxSize='42px'>
+                        <a href='https://discord.gg/tPRE7kH2Hq' target='_blank' rel='noopener noreferrer'>
+                            <Image src={Discord} boxSize='42px' margin='0 15px' alt='discord'/>
+                        </a>
+                    </Box>
+                    <Spacer/>
+                    <Box boxSize='42px'>
+                        <a href='https://twitter.com/crazytigernft' target='_blank' rel='noopener noreferrer'>
+                            <Image src={Twitter} boxSize='42px' margin='0 15px' alt='twitter'/>
+                        </a>
+                    </Box>
+                    <Spacer/>
+                    <Box boxSize='42px'>
+                        <a href='https://opensea.io' target='_blank' rel='noopener noreferrer'>
+                            <Image src={Opensea} boxSize='42px' margin='0 15px' alt='opensea'/>
+                        </a>
+                    </Box>
                 </Flex>
                 {/* right side - sections and connect */}
-                <Flex>
-                    <Box margin='15px 15px'>
-                        <NavLink 
-                        to ='/' 
-                        style={({ isActive }) => isActive ? activeStyle : undefined}>
-                            <Text _hover={{color: "#f9e522"}}>Mint</Text>
-                        </NavLink>
-                    </Box>
-                    <Spacer/>
-                    <Box margin='15px 15px' >
-                        <NavLink 
-                        to ='/about' 
-                        style={({ isActive }) => isActive ? activeStyle : undefined}>
-                            <Text _hover={{color: "#f9e522"}}>About</Text>
-                        </NavLink>
-                    </Box>
-                    <Spacer/>
-                    <Box margin='15px 15px'>
-                        <NavLink 
-                        to ='/team'
-                        style={({ isActive }) => isActive ? activeStyle : undefined}>
-                            <Text _hover={{color: "#f9e522"}}>Team</Text>
-                        </NavLink> 
-                    </Box>
-                    <Spacer/>
+                <nav>
+                    <Flex align='center'>
+                        <Box margin='15px 15px'>
+                            <NavLink 
+                            to ='/' 
+                            style={({ isActive }) => isActive ? activeStyle : undefined}>
+                                <Text _hover={{color: "#f9e522"}}>Mint</Text>
+                            </NavLink>
+                        </Box>
+                        <Spacer/>
+                        <Box margin='15px 15px' >
+                            <NavLink 
+                            to ='/about' 
+                            style={({ isActive }) => isActive ? activeStyle : undefined}>
+                                <Text _hover={{color: "#f9e522"}}>About</Text>
+                            </NavLink>
+                        </Box>
+                        <Spacer/>
+                        <Box margin='15px 15px'>
+                            <NavLink 
+                            to ='/team'
+                            style={({ isActive }) => isActive ? activeStyle : undefined}>
+                                <Text _hover={{color: "#f9e522"}}>Team</Text>
+                            </NavLink> 
+                        </Box>
+                        <Spacer/>
+                    </Flex>
+                </nav>
+                <Flex align='right'>
                     {/* connect */}
                     {isConnected ? (
                         <Button 
@@ -92,7 +107,7 @@ const NavBar = ({ accounts, setAccounts }) => {
                     )}
                 </Flex>
             </Flex>
-        </nav>
+        </header>
     );
 }
 
