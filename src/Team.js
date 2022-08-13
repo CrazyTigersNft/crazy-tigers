@@ -12,8 +12,7 @@ function Team() {
     <div className='team-moving-backround'>
         <Image className='headings' src={TigerTeam}/>
 
-        <Flex justify='center' align='center' height='60vh' paddingBottom='150px'>
-            <Box></Box>
+        <Flex justify='center' align='center' height='60vh' paddingLeft='50px' paddingRight='50px' paddingBottom='150px'>
             <Box>
                 <Image src={Founder1}/>
                 <Box>

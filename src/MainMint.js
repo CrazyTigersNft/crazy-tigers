@@ -27,46 +27,6 @@ const MainMint = ({ accounts, setAccounts }) => {
     const [mintAmount, setMintAmount] = useState(1);
     const isConnected = Boolean(accounts[0]);
 
-    async function getTotalSupply() {
-        
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-        const contract = new ethers.Contract(
-            crazyTigersAddress,
-            crazytigers.abi,
-            signer
-        );
-        try {
-            const response = await contract.totalSupply();
-            alert(`${response}/3333 Crazy Tigers have been MInted!`);
-            console.log('response: ', response)
-        } 
-        catch (err) {
-            console.log('error', err )
-        }
-    
-    }
-
-/*   
-    async function getAccountIndex() {
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-        let address = await signer.getAddress();
-        //console.log(address);
-        let index = allowList.indexOf(address);
-        let isOnAllowed = false;
-        
-        if (index >= 0) {
-            isOnAllowed = true;
-            
-        } else {
-            isOnAllowed = false;
-        }
-
-        return isOnAllowed;
-    } 
-*/
-    
 
     
 /*    
@@ -122,6 +82,7 @@ const MainMint = ({ accounts, setAccounts }) => {
         }
     }
 */
+
     async function handleAllowListMint() {
         if (window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -154,6 +115,25 @@ const MainMint = ({ accounts, setAccounts }) => {
         }
     }
 
+    async function getTotalSupply() {
+        
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(
+            crazyTigersAddress,
+            crazytigers.abi,
+            signer
+        );
+        try {
+            const response = await contract.totalSupply();
+            alert(`${response}/3333 Crazy Tigers have been MInted!`);
+            console.log('response: ', response)
+        } 
+        catch (err) {
+            console.log('error', err )
+        }
+    
+    }
 
     const handleDecrement = () => {
         if (mintAmount <= 1 ) return;
