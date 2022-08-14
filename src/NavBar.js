@@ -1,4 +1,4 @@
-import React, {} from "react";
+import React from "react";
 import { Box, Button, Flex, Image, Spacer, Text} from "@chakra-ui/react";
 import {NavLink} from 'react-router-dom';
 import Discord from './assets/social-media-icons/discord.png';
@@ -7,8 +7,12 @@ import Opensea from './assets/social-media-icons/opensea.png';
 
 
 
-const NavBar = ({ accounts, setAccounts }) => {
+
+function NavBar ({ accounts, setAccounts }) {
     const isConnected = Boolean(accounts[0]);
+
+    
+
 
     async function connectAccount() {
         if (window.ethereum) {
@@ -27,16 +31,16 @@ const NavBar = ({ accounts, setAccounts }) => {
     return (
 
         <header>
-            <Flex justify='space-evenly' align='center' padding='25px'>
+            <Flex justify='space-evenly' align='center' paddingTop='20px'>
                 {/* letft side - socials */}
-                <Flex justify='space-evenly' width='10%' align='left' padding=' 0px 0px 0px 40px'>
-                    <Box boxSize='42px'>
+                <Flex justify='space-evenly' width='10%' align='left'>
+                    <Box className="socialBoxA"boxSize='42px'>
                         <a href='https://discord.gg/tPRE7kH2Hq' target='_blank' rel='noopener noreferrer'>
                             <Image src={Discord} boxSize='42px' margin='0 15px' alt='discord'/>
                         </a>
                     </Box>
                     <Spacer/>
-                    <Box boxSize='42px'>
+                    <Box className="socialBoxB" boxSize='42px'>
                         <a href='https://twitter.com/crazytigernft' target='_blank' rel='noopener noreferrer'>
                             <Image src={Twitter} boxSize='42px' margin='0 15px' alt='twitter'/>
                         </a>
@@ -74,7 +78,6 @@ const NavBar = ({ accounts, setAccounts }) => {
                                 <Text _hover={{color: "#f9e522"}}>Team</Text>
                             </NavLink> 
                         </Box>
-                        <Spacer/>
                     </Flex>
                 </nav>
                 <Flex align='right'>

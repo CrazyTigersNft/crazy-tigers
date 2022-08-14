@@ -22,7 +22,7 @@ let merkleTree = new MerkleTree(leafNodes, keccak256, {sortPairs: true});
 
 
 
-const MainMint = ({ accounts, setAccounts }) => {
+function MainMint ({ accounts, setAccounts }) {
 
     const [mintAmount, setMintAmount] = useState(1);
     const isConnected = Boolean(accounts[0]);
