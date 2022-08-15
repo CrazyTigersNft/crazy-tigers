@@ -2,8 +2,8 @@ import React from "react";
 
 function NoPage() {
   return (
-    <div className="App">
-      404 no page found
+    <div className='moving-backround'>
+      <p className="noparagraphs"> Nothing to see here! Go Back!!</p>
     </div>
   );
 }
