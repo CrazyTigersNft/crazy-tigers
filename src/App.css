@@ -82,22 +82,12 @@ body {
   text-align: center;
 }
 
-header .nav-btn {
-  cursor: pointer;
-  background: #f9e522;
-  color: black;
-  visibility: hidden;
-
-}
-
 @media only screen and (max-width : 700px) {
-  header .nav-btn{
-    visibility: visible;
-  }
+
   header nav{
     position: fixed;
     margin-top: 66px;
-    margin-right: 5%;
+    margin-right: 25px;
     top: 0;
     
   }
@@ -107,5 +97,25 @@ header .nav-btn {
   .socialBoxB{
     margin-right: 5px;
   }
+  .moving-backround {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./assets/background/Crazy_Tigers_mobi.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+  }
+  .job{
+    font-size: 10px;
+  }
+  .name{
+    font-size: 13px;
+  }
+  
 }
 

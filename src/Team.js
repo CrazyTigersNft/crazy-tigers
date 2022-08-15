@@ -17,36 +17,36 @@ function Team() {
                 <Image src={Founder1}/>
                 <Box>
                     <a href='https://twitter.com/Ezekielnfts' target='_blank' rel='noopener noreferrer'>
-                        <Text color='#f9e522'>Ezekiel</Text>
+                        <Text className='name' color='#f9e522'>Ezekiel</Text>
                     </a>
-                    <Text fontSize='13px' as='i'>Founder</Text>
+                    <Text className='job' fontSize='13px' as='i'>Founder</Text>
                 </Box>
             </Box>
             <Box>
                 <Image src={Founder2}/>
                 <Box>
                     <a href='https://twitter.com/Artbyekene_' target='_blank' rel='noopener noreferrer'>
-                        <Text color='#f9e522'>Ekene</Text>
+                        <Text className='name' color='#f9e522'>Ekene</Text>
                     </a>
-                    <Text fontSize='13px' as='i'>Founder</Text>
+                    <Text className='job' fontSize='13px' as='i'>Collabs</Text>
                 </Box>
             </Box>
             <Box>
                 <Image src={Founder3} />
                 <Box>
                     <a href='https://twitter.com/0xGeeLoko' target='_blank' rel='noopener noreferrer'>
-                        <Text color='#f9e522'>GeeLoko</Text>
+                        <Text className='name' color='#f9e522'>GeeLoko</Text>
                     </a>
-                    <Text fontSize='13px' as='i'>Dev</Text>
+                    <Text className='job' fontSize='13px' as='i'>Dev</Text>
                 </Box>
             </Box>
             <Box>
                 <Image src={Founder4} />
                 <Box>
                     <a href='https://twitter.com/walshe_steve' target='_blank' rel='noopener noreferrer'>
-                        <Text color='#f9e522'>Steve</Text>
+                        <Text className='name' color='#f9e522'>Steve</Text>
                     </a>
-                    <Text fontSize='13px' as='i'>Artist</Text>
+                    <Text className='job' fontSize='13px' as='i'>Artist</Text>
                 </Box>
             </Box>
         </Flex>

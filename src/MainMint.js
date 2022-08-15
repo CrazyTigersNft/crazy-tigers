@@ -13,7 +13,7 @@ const keccak256 = require('keccak256');
 //const SHA256 = require('crypto-js/sha256')
 const allowlist = require ('./allowlist');
 
-const crazyTigersAddress = '0x46f678733dbe4cbc8669F52FF9730897B2d12A50';
+const crazyTigersAddress = '0xeEF7688948733838A6efB3FA0a8142b6299A756F';
 //const allowList = allowListAddresses();
 const allowList = allowlist.allowListAddresses();
 let leafNodes = allowList.map(addr => keccak256(addr));
@@ -29,7 +29,7 @@ function MainMint ({ accounts, setAccounts }) {
 
 
     
-/*    
+    
     async function handlePublicMint() {
         if (window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -48,7 +48,7 @@ function MainMint ({ accounts, setAccounts }) {
             }
         }
     }
-*/
+
 /*
     async function handleVipMint() {
         if (window.ethereum) {
@@ -82,7 +82,7 @@ function MainMint ({ accounts, setAccounts }) {
         }
     }
 */
-
+/*
     async function handleAllowListMint() {
         if (window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -114,7 +114,7 @@ function MainMint ({ accounts, setAccounts }) {
             }  
         }
     }
-
+*/
     async function getTotalSupply() {
         
         const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -141,7 +141,7 @@ function MainMint ({ accounts, setAccounts }) {
     };
 
     const handleIncrement = () => {
-        if (mintAmount >= 2 ) return;
+        if (mintAmount >= 100 ) return;
         setMintAmount(mintAmount + 1);
     };
 
@@ -202,7 +202,7 @@ function MainMint ({ accounts, setAccounts }) {
                                 fontFamily='inherit'
                                 padding='15px'
                                 marginTop='10px'
-                                onClick={handleAllowListMint}>Mint Now
+                                onClick={handlePublicMint}>Mint Now
                             </Button>
                             <Button 
                                 backgroundColor='#571252'
