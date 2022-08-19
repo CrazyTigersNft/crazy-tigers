@@ -32,7 +32,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./assets/background/Crazy_Tigers.png');
+  background-image: url('./assets/background/Crazy_Tigers_left.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -45,7 +45,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./assets/background/team_background.png');
+  background-image: url('./assets/background/Crazy_Tigers_left_.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -58,7 +58,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('./assets/background/team_background.png');
+  background-image: url('./assets/background/Crazy_Tigers_left_.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -71,7 +71,7 @@ body {
 }
 
 .paragraphs {
-  margin-top: 700px;
+  margin-top: 170px;
   color: #f9e522;
   text-align: center;
 }
@@ -95,12 +95,13 @@ body {
     margin-top: 66px;
     margin-right: 25px;
     top: 0;
-    
   }
-  .socialBoxA{
+
+  .socialBoxA {
     margin-right: 5px;
   }
-  .socialBoxB{
+
+  .socialBoxB {
     margin-right: 5px;
   }
   .moving-backround {

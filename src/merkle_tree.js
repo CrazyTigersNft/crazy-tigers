@@ -30,7 +30,7 @@ let hexProof = "[" + hex_Proof + "]";
 console.log('hex Proof: ',hexProof)
 console.log('hex Proof: ',hexproof)
 //let index = allowListAddresses.indexOf(address);
-let index = allowListAddresses.indexOf("0x499A8EE5E07d9105F260d5baaF45c961B4623637")
+let index = allowListAddresses.indexOf("0xDc11D9DcA98aa4D8b72436B7F476C9Bc82FaDaF0")
 
 console.log(index)
 //console.log(leafNodes[2])
