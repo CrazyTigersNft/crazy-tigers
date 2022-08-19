@@ -29,27 +29,6 @@ function MainMint ({ accounts, setAccounts }) {
 
 
     
-    
-    async function handlePublicMint() {
-        if (window.ethereum) {
-            const provider = new ethers.providers.Web3Provider(window.ethereum);
-            const signer = provider.getSigner();
-            const contract = new ethers.Contract(
-                crazyTigersAddress,
-                crazytigers.abi,
-                signer
-            );
-            try {
-                const response = await contract.publicMint(BigNumber.from(mintAmount), {value: ethers.utils.parseEther((0.009 * mintAmount).toString())});
-                console.log('response: ', response)
-            } 
-            catch (err) {
-                console.log('error', err )
-            }
-        }
-    }
-
-/*
     async function handleVipMint() {
         if (window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -81,7 +60,7 @@ function MainMint ({ accounts, setAccounts }) {
             
         }
     }
-*/
+
 /*
     async function handleAllowListMint() {
         if (window.ethereum) {
@@ -112,6 +91,25 @@ function MainMint ({ accounts, setAccounts }) {
                     
                 }
             }  
+        }
+    }
+
+    async function handlePublicMint() {
+        if (window.ethereum) {
+            const provider = new ethers.providers.Web3Provider(window.ethereum);
+            const signer = provider.getSigner();
+            const contract = new ethers.Contract(
+                crazyTigersAddress,
+                crazytigers.abi,
+                signer
+            );
+            try {
+                const response = await contract.publicMint(BigNumber.from(mintAmount), {value: ethers.utils.parseEther((0.009 * mintAmount).toString())});
+                console.log('response: ', response)
+            } 
+            catch (err) {
+                console.log('error', err )
+            }
         }
     }
 */
@@ -202,7 +200,7 @@ function MainMint ({ accounts, setAccounts }) {
                                 fontFamily='inherit'
                                 padding='15px'
                                 marginTop='10px'
-                                onClick={handlePublicMint}>Mint Now
+                                onClick={handleVipMint}>Mint Now
                             </Button>
                             <Button 
                                 backgroundColor='#571252'
