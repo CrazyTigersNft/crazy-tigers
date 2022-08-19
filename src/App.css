@@ -149,6 +149,10 @@ body {
   .name{
     font-size: 11px;
   }
-  
+  .paragraphs {
+    margin-top: 700px;
+    color: #f9e522;
+    text-align: center;
+  }
 }
 
