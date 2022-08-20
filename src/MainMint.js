@@ -59,7 +59,7 @@ function MainMint ({ accounts, setAccounts }) {
         }
     }
 */
-
+/*
     async function handleAllowListMint() {
         if (window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -91,7 +91,7 @@ function MainMint ({ accounts, setAccounts }) {
             }  
         }
     }
-/*
+*/
     async function handlePublicMint() {
         if (window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -110,7 +110,7 @@ function MainMint ({ accounts, setAccounts }) {
             }
         }
     }
-*/
+
     async function getTotalSupply() {
         
         const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -198,7 +198,7 @@ function MainMint ({ accounts, setAccounts }) {
                                 fontFamily='inherit'
                                 padding='15px'
                                 marginTop='10px'
-                                onClick={handleAllowListMint}>Mint Now
+                                onClick={handlePublicMint}>Mint Now
                             </Button>
                             <Button 
                                 backgroundColor='#571252'
