@@ -26,7 +26,7 @@ function MainMint ({ accounts, setAccounts }) {
     const isConnected = Boolean(accounts[0]);
 
 
-    
+/*   
     async function handleVipMint() {
         if (window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -58,8 +58,8 @@ function MainMint ({ accounts, setAccounts }) {
             
         }
     }
+*/
 
-/*
     async function handleAllowListMint() {
         if (window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -91,7 +91,7 @@ function MainMint ({ accounts, setAccounts }) {
             }  
         }
     }
-
+/*
     async function handlePublicMint() {
         if (window.ethereum) {
             const provider = new ethers.providers.Web3Provider(window.ethereum);
@@ -198,7 +198,7 @@ function MainMint ({ accounts, setAccounts }) {
                                 fontFamily='inherit'
                                 padding='15px'
                                 marginTop='10px'
-                                onClick={handleVipMint}>Mint Now
+                                onClick={handleAllowListMint}>Mint Now
                             </Button>
                             <Button 
                                 backgroundColor='#571252'
