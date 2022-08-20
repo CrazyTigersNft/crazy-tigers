@@ -137,7 +137,7 @@ function MainMint ({ accounts, setAccounts }) {
     };
 
     const handleIncrement = () => {
-        if (mintAmount >= 2 ) return;
+        if (mintAmount >= 6 ) return;
         setMintAmount(mintAmount + 1);
     };
 
