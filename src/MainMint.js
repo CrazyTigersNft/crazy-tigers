@@ -4,17 +4,15 @@ import { Box, Button, Flex, Input, Text } from "@chakra-ui/react";
 import crazytigers from './CrazyTigers.json'
 import { Buffer } from "buffer/";
 window.Buffer = window.Buffer || Buffer;
-//import {MerkleTree} from "merkletreejs";
-//import keccak256 from "keccak256";
-//import allowListAddresses from './allow.js';
+
 
 const {MerkleTree} =  require('merkletreejs');
 const keccak256 = require('keccak256');
-//const SHA256 = require('crypto-js/sha256')
+
 const allowlist = require ('./allowlist');
 
-const crazyTigersAddress = '0xeEF7688948733838A6efB3FA0a8142b6299A756F';
-//const allowList = allowListAddresses();
+const crazyTigersAddress = '0x1b1012F3DF50cf3003699bcfa324c5125782acA5';
+
 const allowList = allowlist.allowListAddresses();
 let leafNodes = allowList.map(addr => keccak256(addr));
 let merkleTree = new MerkleTree(leafNodes, keccak256, {sortPairs: true});
