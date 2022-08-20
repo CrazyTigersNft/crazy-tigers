@@ -47,7 +47,7 @@ function NavBar ({ accounts, setAccounts }) {
                     </Box>
                     <Spacer/>
                     <Box boxSize='42px'>
-                        <a href='https://opensea.io' target='_blank' rel='noopener noreferrer'>
+                        <a href='https://opensea.io/collection/official-crazy-tigers-club' target='_blank' rel='noopener noreferrer'>
                             <Image src={Opensea} boxSize='42px' margin='0 15px' alt='opensea'/>
                         </a>
                     </Box>
